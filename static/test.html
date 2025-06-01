@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Sayfası - HTTP Sunucusu</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Sayfası</h1>
+        <p>Bu sayfa HTTP sunucusunun statik dosya sunma özelliğini test etmek için oluşturulmuştur.</p>
+        
+        <div class="test-section">
+            <h2>API Test</h2>
+            <button onclick="testAPI()">API Test Et</button>
+            <div id="api-result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>POST Test</h2>
+            <input type="text" id="post-data" placeholder="Test verisi girin">
+            <button onclick="testPOST()">POST Gönder</button>
+            <div id="post-result"></div>
+        </div>
+        
+        <div class="info">
+            <h3>Dosya Bilgileri</h3>
+            <ul>
+                <li>HTML dosyası: <code>/static/test.html</code></li>
+                <li>CSS dosyası: <code>/static/style.css</code></li>
+                <li>JavaScript dosyası: <code>/static/script.js</code></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html> 

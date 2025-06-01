@@ -1,0 +1,34 @@
+# Docker Compose yapılandırması
+# HTTP Web Sunucusu - Mertcan Gelbal
+
+version: '3.8'
+
+services:
+  http-server:
+    image: gelbalmertcan/http-server-from-scratch:latest
+    # build: .  # Yerel build için bu satırı kullan
+    container_name: http-server-mertcan
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; s=socket.socket(); s.connect(('localhost', 8080)); s.close()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - http-network
+
+networks:
+  http-network:
+    driver: bridge
+    name: http-server-network
+
+volumes:
+  logs:
+    driver: local 

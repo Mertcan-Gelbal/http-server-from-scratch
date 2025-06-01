@@ -1,0 +1,57 @@
+# Git dosyaları
+.git
+.gitignore
+
+# Python cache dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log dosyaları
+*.log
+logs/
+
+# Temporary dosyalar
+*.tmp
+*.temp
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Ödev dosyaları
+HTTP_Server_Assignment.md
+DELIVERY_HTTP_Server.md
+
+# README ve dokümantasyon (isteğe bağlı)
+# README.md
+# docs/ 
